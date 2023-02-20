@@ -1,0 +1,70 @@
+.ewtm-pm-popoptions {
+    padding: 0.5rem;
+    width: 100%;
+    transition: all;
+    max-height: 300px;
+    overflow-y: scroll;
+    .qo__mask {
+        --z-index: var(--adm-mask-z-index,1000);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: var(--z-index);
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    div.qo__option {
+        border-radius: 4px;
+        min-height: 54px;
+        display: flex;
+        border: 1px solid #f3f3f3;
+        overflow: hidden;
+        margin-top: 0.5rem;
+        .qo__tag, .qo__content{
+            display: flex;
+            align-items: center;
+        }
+        .qo__tag {
+            min-width: 34px;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: $font-size-mlg;
+            text-align: center;
+            color: #268eff;
+        }
+        .qo__content {
+            flex: 1;
+            padding: .6rem;
+            line-height: 20px;
+            overflow: hidden;
+            word-break: break-all;
+        }
+    }
+    div.qo__option.checked {
+        border-color: #0598f7;
+        .qo__tag {
+            background-color: #0598f7;
+            color: #fff;
+        }
+    }
+    div.qo__option.fault {
+        border-color: #ff7e7e;
+        .qo__tag {
+            border-right-color: #ff7e7e;
+            background-color: #ff7e7e;
+            color: #fff;
+        }
+    }
+    div.qo__option.success {
+        border-color: #67e296;
+        .qo__tag {
+            border-right-color: #67e296;
+            background-color: #67e296;
+            color: #fff;
+        }
+    }
+}
+.ewtm-pm-popoptions.visible {
+    bottom: 0;
+}

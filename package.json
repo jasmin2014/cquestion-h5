@@ -1,0 +1,56 @@
+{
+  "name": "@ewtm/paper-common-h5",
+  "version": "0.1.0",
+  "description": "H5 component library of mobile devices",
+  "author": "ewtgly123",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.12",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "antd-mobile": "^5.28.0",
+    "node-sass": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "clean": "rimraf ./dist",
+    "build": "npm run build-css && npm run build-ts",
+    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
+    "build-ts": "tsc -p tsconfig.build.json",
+    "prepublish": "npm run build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev-css": "node-sass ./src/styles/index.scss ./src/dist.css",
+    "dev": "npm run dev-css && npm run start"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

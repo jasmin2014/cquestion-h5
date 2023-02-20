@@ -1,0 +1,186 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  text-align: $body-text-align;
+  background-color: $body-gray-bg;
+}
+
+%heading {
+  margin-top: 0;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+}
+
+h1 {
+  @extend %heading;
+  font-size: $h1-font-size;
+}
+
+h2 {
+  @extend %heading;
+  font-size: $h2-font-size;
+}
+
+h3 {
+  @extend %heading;
+  font-size: $h3-font-size;
+}
+
+h4 {
+  @extend %heading;
+  font-size: $h4-font-size;
+}
+
+h5 {
+  @extend %heading;
+  font-size: $h5-font-size;
+}
+
+h6 {
+  @extend %heading;
+  font-size: $h6-font-size;
+}
+
+p {
+  margin: 0;
+}
+
+ol,
+ul,
+dl {
+  margin: 0;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin: 0;
+}
+
+dt {
+  font-weight: $dt-font-weight;
+}
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0; 
+}
+
+b,
+strong {
+  font-weight: $font-weight-bolder;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    text-decoration: none;
+  }
+}
+
+a:not([href]) {
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img {
+  vertical-align: middle;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+
+th {
+  text-align: inherit;
+}
+
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+button {
+  border-radius: 0;
+}
+
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+select {
+  word-wrap: normal;
+}
+
+[list]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+
+  @if $enable-pointer-cursor-for-buttons {
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+  }
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: textfield;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
